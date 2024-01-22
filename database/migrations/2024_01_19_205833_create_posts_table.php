@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('desc');
-            $table->string('image')->default('');
+            $table->string('title');
+            $table->string('description');
+            $table->string('image');
 
             //Relationships
             $table->unsignedBigInteger('user_id');
